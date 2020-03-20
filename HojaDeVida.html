@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Hoja de Vida</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css" />
+		
+	</head>
+	<body>
+		<div id="infoPer">
+		<h1 id="nombre" type="text" name="nombre">Juan Pablo Perea Hernández</h1>
+		<IMG SRC="mundo.jpg" width="88" height="87" HSPACE="10" VSPACE="10">
+		<p><b>Cedula :</b> 1026595347</p>
+		<p><b>Fecha Nacimiento :</b>05 de septiembre de 1998</p>
+		<p><b>Telefono :</b>3112456789</p>
+		<p><b>Dirección :</b>Carrera X # Y Z</p>
+		<p><b>Ciudad :</b>Bogotá D.C.</p>
+		<p><b>Estado Civil :</b>soltero</p>
+		<p><b>E-mail :</b>nombre@gmail.com</p>
+		</div>
+		<div id="perfPro">
+		<h2> Perfil Profesional</h2>
+		<p>Estudiante que se encuentra cursando el 7° semestre de ingenieria de sistemas,
+		he tenido experiencia manejando lenguajes como los son python, C++ y java, tambien
+		cuento conocimientos sobre manejo de bases de datos SQL y NoSQL.</p>
+		</div>
+		<div id="estudio">
+		<h2>Formacion Academica</h2>
+		<h3>Formacion Universitaria</h3>
+		<p><b>Titulo:</b>  Ing. Sistemas</p>
+		<p><b>Año Graduacion:</b>  xxxx</p>
+		<p><b>Institucion:</b>  Universidad Distrital Francsisco Jose de Caldas</p>
+		<h3>Secundaria</h3>
+		<p><b>Titulo:</b>  Bachiller</p>
+		<p><b>Institucion:</b>  Escuela Tegnologica Instituto Tecnico Central</p>
+		</div>
+		<button type="button" id="guard">Guardar Datos</button>
+		<button type="button" id="revisar">Revisar Datos</button>
+		<p><a href="Hoja de vida 1.html">Hoja de vida de Vallejo</a></p>
+		<script>
+		var nombre = "Juan Pablo Perea Hernández";
+		var cedula = "1026595347";
+		var fNaci = "05 de septiembre de 1998";
+		var telefono = "3114781189";
+		var direccion = "Carrera 34 # 5 - 23";
+		var estCivil = "soltero";
+		document.getElementById("revisar").addEventListener("click",mostrar);
+		document.getElementById("guard").addEventListener("click",guardar);
+		function mostrar(){
+			alert("sopas");
+			alert(localStorage.getItem("x")+"\n"+localStorage.getItem("y")+
+			"\n"+localStorage.getItem("z")+"\n"+localStorage.getItem("a")+"\n"+
+			localStorage.getItem("b")+"\n"+localStorage.getItem("c"));
+			
+        }
+		
+		function guardar(){
+			alert("otra vez");
+			localStorage.setItem("x",nombre);
+			localStorage.setItem("y",cedula);
+			localStorage.setItem("z",fNaci);
+			localStorage.setItem("a",telefono);
+			localStorage.setItem("b",direccion);
+			localStorage.setItem("c",estCivil);
+			
+		}
+		</script>
+		
+		
+	</body>
+</html> 
