@@ -1,0 +1,93 @@
+<html>
+	<head>
+	
+		<title>Hoja de vida</title>
+		
+		<link rel="stylesheet" type="text/css" href="plantilla.css"/>
+		
+		
+	</head>
+	
+ 
+	<body>
+
+		<h1>Hoja de vida</h1>
+		
+		<h2>Sebastian Vallejo Rangel</h2>
+		<IMG src="yomerengues.jpg" width="188" height="187" HSPACE="10" VSPACE="10">
+		
+		<p><b>Correo: </b> sebastianvallejo1999@gmail.com.</p>
+		<p><b>Fecha de nacimiento: </b>8 de mayo de 1999.</p>
+		<p><b>Numero de cedula: </b> 1026350072.</p>
+		<p><b>Direccion: </b>Carrera 70 n 3-38.</p>
+		<p><b>Telefono movil: </b>3016520890.</p>
+		<p><b>Estado civil:</b> Soltero.</p>
+		<p><b>Ciudad: </b>Bogota D.C.</p>
+		
+		
+		<h2>Estudios:</h2>
+		
+		<p>Estudiante de ingenieria de sistemas en la universidad distrital Francisco Jose de Caldas.</p>
+ 
+ 
+		<h2>Formacion Academica:</h2>
+		
+		<h3>Formacion primaria:</h3>
+		<p><b>Titulacion: </b>profesional en plastilina.</p>
+		<p><b>Año de graduacion: </b>23 de noviembre del 2009.</p>
+		<p><b>institucion: </b>colegio jose allamano.</p>
+ 
+		<h3>Formacion secundaria:</h3>
+		<p><b>Titulacion: </b>bachiller.</p>
+		<p><b>Año de graduacion: </b>23 de noviembre del 2016.</p>
+		<p><b>institucion: </b>colegio jose allamano.</p>
+		
+		
+		<h2>Experiencia laboral:</h2>
+		
+		<p><b>Cargo: </b>Conserje principal</p>
+		<p><b>Empresa: </b>harvard university</p>
+		<p><b>logros: </b>Optimizacion de lavado de baños</p>
+		
+		<button type="button" id="guard">Guardar Datos</button>
+		<button type="button" id="revisar">Revisar Datos</button>
+		
+		<script>
+		
+		var nombre = "Sebastian Vallejo Rangel";
+		var cedula = "1026350072";
+		var fNaci = "8 de mayo de 1999";
+		var telefono = "3016520890";
+		var direccion = "Carrera 70 n 3-38";
+		var estCivil = "soltero";
+		document.getElementById("revisar").addEventListener("click",mostrar);
+		document.getElementById("guard").addEventListener("click",guardar);
+		
+		function mostrar(){
+			
+			alert(localStorage.getItem("x")+"\n"+localStorage.getItem("y")+
+			"\n"+localStorage.getItem("z")+"\n"+localStorage.getItem("a")+"\n"+
+			localStorage.getItem("b")+"\n"+localStorage.getItem("c"));
+			
+        }
+		
+		function guardar(){
+			
+			localStorage.setItem("x",nombre);
+			localStorage.setItem("y",cedula);
+			localStorage.setItem("z",fNaci);
+			localStorage.setItem("a",telefono);
+			localStorage.setItem("b",direccion);
+			localStorage.setItem("c",estCivil);
+			
+		}
+		
+		</script>
+		<p><a href="HojaDeVida.html">hoja de vida pepe</a></p>
+
+		
+	</body>
+ 
+ 
+ 
+</html>
